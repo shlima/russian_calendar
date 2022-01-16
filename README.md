@@ -8,7 +8,8 @@
 Минэкономразвития России (включая дополнения
 из [Консультант+](http://www.consultant.ru/law/ref/calendar/proizvodstvennye/))
 
-Работает на основе [кодогенерации](https://github.com/shlima/russian_calendar/blob/master/bin/build.rb) из исходного CSV файла.
+Работает на основе [кодогенерации](https://github.com/shlima/russian_calendar/blob/master/bin/build.rb) из исходного CSV
+файла.
 
 ## Использование
 
@@ -52,8 +53,33 @@ func main() {
 }
 ```
 
+## Использование со своим индексом
+
+```go
+package main
+
+import (
+	"time"
+
+	calendar "github.com/shlima/russian_calendar"
+)
+
+func main() {
+	source := &calendar.SourceMap{
+		2001: {
+			1: {
+				1: true,
+			},
+		},
+	}
+	
+	cal := calendar.NewSourced(time.Now(), source)
+	cal.GteHoliday()
+}
+```
+
 ## Обновление данных
 
-* обновить файл `calendar.csv` из data.gov.ru
+* обновить файл `calendar.csv` (из Консультант+)
 * make build (сгенерирует go hash)
 * git push
