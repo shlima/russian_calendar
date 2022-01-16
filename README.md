@@ -1,5 +1,7 @@
 ## GO производственный календарь
 
+![CI](https://github.com/shlima/russian_calendar/actions/workflows/test.yml/badge.svg)
+
 Пакет проверяет признак праздника/рабочего дня на заданную дату,
 [набор данных](https://github.com/shlima/russian_calendar/blob/master/calendar.csv)
 предоставлен [Порталом открытых данных](https://data.gov.ru/opendata/7708660670-proizvcalendar)
