@@ -1,6 +1,6 @@
 package russian_calendar
 
-// CODE GENERATED AT 2022-01-16 13:35:23 UTC. DO NOT EDIT.
+// CODE GENERATED AT 2022-01-16 15:59:39 UTC. DO NOT EDIT.
 
 func init() {
 	Source = SourceMap{1999: {1: {1: true,
@@ -2711,8 +2711,8 @@ func init() {
 		23: true,
 		26: true,
 		27: true,
-	}, 3: {5: true,
-		6:  true,
+	}, 3: {6: true,
+		7:  true,
 		8:  true,
 		12: true,
 		13: true,
@@ -2731,9 +2731,11 @@ func init() {
 		30: true,
 	}, 5: {1: true,
 		2:  true,
+		3:  true,
 		7:  true,
 		8:  true,
 		9:  true,
+		10: true,
 		14: true,
 		15: true,
 		21: true,
