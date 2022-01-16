@@ -8,6 +8,8 @@
 Минэкономразвития России (включая дополнения
 из [Консультант+](http://www.consultant.ru/law/ref/calendar/proizvodstvennye/))
 
+Работает на основе [кодогенерации](https://github.com/shlima/russian_calendar/blob/master/bin/build.rb) из исходного CSV файла.
+
 ## Использование
 
 ```go
