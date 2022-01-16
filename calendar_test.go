@@ -7,6 +7,12 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestCalendar_Implementation(t *testing.T) {
+	t.Run("it works", func(t *testing.T) {
+		require.Implements(t, (*ICalendar)(nil), Calendar{})
+	})
+}
+
 func TestCalendar_Next(t *testing.T) {
 	type args struct {
 		desc  string
