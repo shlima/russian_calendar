@@ -13,12 +13,12 @@ func (i SourceMap) Exists(input time.Time) (bool, error) {
 
 	yearMap, exists := i[y]
 	if !exists {
-		return false, fmt.Errorf("%d not found: %w", y, ErrOutOfRange)
+		return false, fmt.Errorf("%w: year %d", ErrOutOfRange, y)
 	}
 
 	monthMap, exists := yearMap[m]
 	if !exists {
-		return false, fmt.Errorf("%d.%d month not found: %w", y, m, ErrOutOfRange)
+		return false, fmt.Errorf("%w: %d-%d", ErrOutOfRange, y, m)
 	}
 
 	return monthMap[d], nil

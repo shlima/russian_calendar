@@ -35,8 +35,11 @@ func (c Calendar) IsHoliday() (bool, error) {
 }
 
 func (c Calendar) IsWorkday() (bool, error) {
-	holiday, err := c.IsHoliday()
-	return !holiday, err
+	if holiday, err := c.IsHoliday(); err != nil {
+		return false, err
+	} else {
+		return !holiday, nil
+	}
 }
 
 func (c Calendar) GteHoliday() (ICalendar, error) {
