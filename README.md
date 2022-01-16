@@ -11,6 +11,11 @@
 Работает на основе [кодогенерации](https://github.com/shlima/russian_calendar/blob/master/bin/build.rb) из исходного CSV
 файла.
 
+## Установка
+```bash
+go get github.com/shlima/russian_calendar
+```
+
 ## Использование
 
 ```go
