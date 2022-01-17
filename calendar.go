@@ -4,14 +4,14 @@ import "time"
 
 type Calendar struct {
 	time   time.Time
-	source *SourceMap
+	source ISource
 }
 
 func New(input time.Time) ICalendar {
 	return NewSourced(input, &Source)
 }
 
-func NewSourced(input time.Time, source *SourceMap) ICalendar {
+func NewSourced(input time.Time, source ISource) ICalendar {
 	return Calendar{
 		time:   input,
 		source: source,

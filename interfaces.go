@@ -19,3 +19,7 @@ type ICalendar interface {
 	LtWorkday() (ICalendar, error)
 	Time() time.Time
 }
+
+type ISource interface {
+	Exists(input time.Time) (bool, error)
+}

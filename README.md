@@ -83,6 +83,29 @@ func main() {
 }
 ```
 
+## Использование со своим источником данных
+
+```go
+package main
+
+import (
+	"time"
+
+	calendar "github.com/shlima/russian_calendar"
+)
+
+type Source struct {}
+
+func (s Source) Exists(input time.Time) (bool, error) {
+	return true, nil
+}
+
+func main() {
+	cal := calendar.NewSourced(time.Now(), &Source{})
+	cal.GteHoliday()
+}
+```
+
 ## Обновление данных
 
 * обновить файл `calendar.csv` (из Консультант+)

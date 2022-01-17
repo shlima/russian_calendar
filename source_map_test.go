@@ -7,6 +7,12 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestSourceMap_Implementation(t *testing.T) {
+	t.Run("it works", func(t *testing.T) {
+		require.Implements(t, (*ISource)(nil), SourceMap{})
+	})
+}
+
 func TestSourceMap_Exists(t *testing.T) {
 	type args struct {
 		desc  string
